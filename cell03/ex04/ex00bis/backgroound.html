@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Background Color</title>
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f4f6fb;
+      transition: background 0.4s;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    button {
+      padding: 18px 38px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 12px;
+      background: #222;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    button:hover {
+      background: #444;
+      color: #f4f6fb;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="changeBg()">Random Color</button>
+  <script>
+    function changeBg() {
+      const randomColor = "#" + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0');
+      document.body.style.background = randomColor;
+    }
+  </script>
+</body>
+</html>
