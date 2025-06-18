@@ -1,0 +1,74 @@
+body {
+  background: linear-gradient(120deg, #FFC0CB 0%, #808080 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.fruit-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.Ramen-btn {
+  background: linear-gradient(90deg, #FFFF00 0%, #008000 100%);
+  color: #FFC0CB;
+  padding: 18px 44px;
+  font-size: 1.3em;
+  border: none;
+  border-radius: 30px 30px 18px 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: background 0.3s;
+  user-select: none;
+}
+
+.Ramen-menu:hover .Ramen-dropdown,
+.Ramen-menu:focus-within .Ramen-dropdown {
+  display: block;
+  animation: fadeIn 0.3s;
+}
+
+.Ramen-dropdown {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  min-width: 220px;
+  background: #ffffd1;
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  z-index: 1;
+  padding: 0;
+  margin-top: 2px;
+  border: 2px solid #ffbebc;
+  border-top: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.Ramen-dropdown li {
+  list-style: none;
+  padding: 16px 28px;
+  color: #6b3e26;
+  font-size: 1.1em;
+  border-bottom: 1px solid #ffe5b4;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+.Ramen-dropdown li:last-child {
+  border-bottom: none;
+}
+
+.Ramen-dropdown li:hover {
+  background: #ffe5b4;
+  color: #b85c38;
+}
